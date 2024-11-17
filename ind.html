@@ -9,89 +9,82 @@
 <body class="bg-gray-900 text-white font-sans">
 
     <!-- Main Container -->
-    <div class="flex flex-col items-center justify-center h-screen p-10 relative">
+    <div class="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 md:p-10 relative">
         
         <div class="bg-gray-700 rounded-lg shadow-lg p-6 w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2">
               
-           
             <!-- About Me Section -->
-             <div class="flex flex-row items-center justify-between">
-
-             <div>
-            <h2 class="flex justify-center text-4xl bg-center font-bold  mb-8 mt-4 text-blue-400 font-serif">About Me</h2>
-             </div>
-
-             <!-- Cross Button -->
-             <div>
-             <a href="index.html" 
-             class=" bg-blue-400 text-black p-2 rounded-full hover:bg-blue-200 transition duration-300" 
-             title="Back to Portfolio">
-              ✖
-             </a>
-             </div>
-
+            <div class="flex flex-col sm:flex-row items-center justify-between">
+                <h2 class="text-3xl sm:text-4xl font-bold text-blue-400 font-serif mb-4 sm:mb-0">
+                    About Me
+                </h2>
+                <!-- Cross Button -->
+                <a href="index.html" 
+                   class="bg-blue-400 text-black p-2 rounded-full hover:bg-blue-200 transition duration-300" 
+                   title="Back to Portfolio">
+                    ✖
+                </a>
             </div>
- 
-            <p class="text-lg mb-10 text-yellow-200">
-                I am a dedicated, self-motivated, and skilled student with a strong academic foundation. I am passionate about creating beautiful, functional, and user-friendly websites. I am a Full Stack developer. I am familiar with technologies like HTML, CSS, JavaScript, ReactJs, Tailwind CSS, Node.js, Express.js, and MongoDB. 
+
+            <p class="text-base sm:text-lg mb-6 text-yellow-200 leading-relaxed">
+                I am a dedicated, self-motivated, and skilled student with a strong academic foundation. I am passionate about creating beautiful, functional, and user-friendly websites. I am a Full Stack developer. I am familiar with technologies like HTML, CSS, JavaScript, ReactJs, Tailwind CSS, Node.js, Express.js, and MongoDB.
             </p>
 
-            <!-- Centered Button Navigation -->
-            <div class="flex gap-6 mb-8 mt-8 justify-center">
-                <button onclick="showSection('education')" id="education-tab" class="tab-button bg-blue-500 px-4 py-2 focus:outline-none transition duration-300">
+            <!-- Button Navigation -->
+            <div class="flex gap-4 justify-center mb-6">
+                <button onclick="showSection('education')" id="education-tab" 
+                        class="tab-button bg-blue-500 text-sm sm:text-base px-3 sm:px-6 py-2 rounded focus:outline-none transition duration-300">
                     Education
                 </button>
-                <button onclick="showSection('skills')" id="skills-tab" class="tab-button bg-blue-500 px-8 py-2 focus:outline-none transition duration-300">
+                <button onclick="showSection('skills')" id="skills-tab" 
+                        class="tab-button bg-blue-500 text-sm sm:text-base px-3 sm:px-6 py-2 rounded focus:outline-none transition duration-300">
                     Skills
                 </button>
             </div>
 
             <!-- Education Section -->
-            <div id="education" class="section flex items-center">
-                <div class="m-4">
-                    <p class="text-white font-sans italic font-light font-semibold">June 2023– May 2025</p>
-                    <h3 class="text-xl font-bold text-blue-400">MCA</h3>
+            <div id="education" class="section grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <p class="text-white font-sans italic font-light">June 2023– May 2025</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-blue-400">MCA</h3>
                     <p class="text-gray-400">Jawaharlal Nehru University, New Delhi, India</p>
                 </div>
-                <div class="m-4">
-                    <p class="text-white font-sans italic font-light font-semibold">Sep 2020–June 2023</p>
-                    <h3 class="text-xl font-bold text-blue-400">B.Sc</h3>
+                <div>
+                    <p class="text-white font-sans italic font-light">Sep 2020–June 2023</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-blue-400">B.Sc</h3>
                     <p class="text-gray-400">Rajasthan University, Jaipur, Rajasthan</p>
                 </div>
-                <div class="m-4 mt-0">
-                    <p class="text-white font-sans italic font-light font-semibold">May 2018– April 2020</p>
-                    <h3 class="text-xl font-bold text-blue-400">Intermediate</h3>
-                    <p class="text-gray-400">Engineer's Point, Alwar, Rajasthan </p>
+                <div>
+                    <p class="text-white font-sans italic font-light">May 2018– April 2020</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-blue-400">Intermediate</h3>
+                    <p class="text-gray-400">Engineer's Point, Alwar, Rajasthan</p>
                 </div>
-                <div class="m-4 mt-0">
-                    <p class="text-white font-sans italic font-light font-semibold">April 2016– May 2018</p>
-                    <h3 class="text-xl font-bold text-blue-400">Matriculation</h3>
-                    <p class="text-gray-400">K'timess, Alwar, Rajasthan </p>
+                <div>
+                    <p class="text-white font-sans italic font-light">April 2016– May 2018</p>
+                    <h3 class="text-lg sm:text-xl font-bold text-blue-400">Matriculation</h3>
+                    <p class="text-gray-400">K'timess, Alwar, Rajasthan</p>
                 </div>
             </div>
 
             <!-- Skills Section -->
             <div id="skills" class="section hidden">
-                <div class="flex flex-wrap gap-4 justify-center mb-6">
-                    <!-- Technologies Tags -->
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#react.js</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#redux</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#C</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#C++</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#Java</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#html</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#css</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#tailwind</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#javascript</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#router</span>                 
-                    
-                   
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#git</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#github</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#VS code</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#My SQL</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#adobeXD</span>
-                    <span class="bg-green-100 text-black font-semibold py-3 px-5 rounded-full">#figma</span>
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#react.js</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#redux</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#C</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#C++</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#Java</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#html</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#css</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#tailwind</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#javascript</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#router</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#git</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#github</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#VS code</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#My SQL</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#adobeXD</span>
+                    <span class="bg-green-100 text-black font-semibold text-sm sm:text-base py-2 px-4 rounded-full">#figma</span>
                 </div>
             </div>
             
